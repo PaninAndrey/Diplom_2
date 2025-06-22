@@ -53,6 +53,10 @@ class TestCreateUser:
             name = user_data[Key.NAME]
         with allure.step('Получаем значение "name" из словаря "user" в теле ответа'):
             name_response = user_dict[Key.NAME]
+        with allure.step('Получаем авторизационный токен'):
+            access_token = Help.get_access_token(response.json())
+        with allure.step('Удаляем созданного пользователя'):
+            DU.delete_user(access_token)
         with allure.step('Проверяем, что "name", указанное в запросе, и "name", полученное в теле ответа на запрос, совпадают'):
             assert name == name_response, f'"{name}", указанное в запросе, и "{name_response}", полученное в теле ответа на запрос, НЕ совпадают'
 
