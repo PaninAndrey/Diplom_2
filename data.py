@@ -1,13 +1,3 @@
-class Url:
-
-    BASE_URL = 'https://stellarburgers.nomoreparties.site' # URL-адрес веб-приложения Stellar Burgers
-    REGISTER_USER = '/api/auth/register' # Эндпоинт для создания пользователя
-    LOGIN_USER = '/api/auth/login' # Эндпоинт для авторизации пользователя
-    GET_INGREDIENTS = '/api/ingredients' # Эндпоинт для получения данных об ингредиентах
-    MAKE_ORDER = '/api/orders'  # Эндпоинт для создания заказа
-    DELETE_USER = '/api/auth/user' # Эндпоинт для удаления пользователя
-
-
 class RequestAndResponseKeys:
 
     EMAIL = 'email'
